@@ -19,7 +19,7 @@ prompt_helper = PromptHelper(max_input_size, num_output, max_chunk_overlap)
 # Load documents from the 'data' directory
 documents = SimpleDirectoryReader('data').load_data()
 index = GPTSimpleVectorIndex(
-    documents, llm_predictor=llm_predictor, prompt_helper=prompt_helper
+    documents, llm=llm_predictor, prompt_helper=prompt_helper
 )
 
 # Define a simple Streamlit app
